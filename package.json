@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf client/public",
-    "test": "node_modules/jest-cli/bin/jest.js",
-    "build": "npm run clean && node_modules/webpack/bin/webpack.js",
+    "test": "node_modules/jest-cli/bin/jest.js --verbose",
+    "build": "npm run clean && node_modules/webpack/bin/webpack.js --colors",
     "start": "node server"
   },
   "repository": {
