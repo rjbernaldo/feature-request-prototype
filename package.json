@@ -1,0 +1,39 @@
+{
+  "name": "feature-request-prototype",
+  "version": "0.0.1",
+  "description": "Internal full stack prototype to handle incoming feature requests sent by clients",
+  "main": "index.js",
+  "scripts": {
+	"clean": "rimraf client/public",
+    "test": "node_modules/jest-cli/bin/jest.js",
+    "build": "npm run clean && node_modules/webpack/bin/webpack.js",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjbernaldo/feature-request-prototype.git"
+  },
+  "author": "Rj Bernaldo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rjbernaldo/feature-request-prototype/issues"
+  },
+  "homepage": "https://github.com/rjbernaldo/feature-request-prototype#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "html-webpack-plugin": "^2.9.0",
+    "jest": "^0.1.40",
+    "jest-cli": "^0.8.2",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.4",
+    "node-jsx": "^0.13.3",
+    "path": "^0.12.7",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
