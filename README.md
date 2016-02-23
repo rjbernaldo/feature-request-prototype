@@ -1,6 +1,6 @@
 # Feature Request Prototype
 
-Internal full stack prototype to handle incoming feature requests sent by clients
+Internal full stack prototype to handle incoming feature requests sent by clients :tada:
 
 ## Instructions
 
@@ -15,4 +15,6 @@ npm test
 ## Demo
 
 ## Notes
+
+Drawn using [sketch.io/sketchpad](https://sketch.io/sketchpad)
 ![alt tag](https://raw.githubusercontent.com/rjbernaldo/feature-request-prototype/master/wireframe.png)
