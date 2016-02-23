@@ -3,16 +3,16 @@ var router = require('express').Router();
 var React = require('react');
 var ReactDOM = require('react-dom');
 var FeatureRequestApp = require('../../client/components/FeatureRequestApp.react');
-var features = require('./features');
+var featureRequests = require('./feature_requests');
 var path = require('path');
 
 /*
 router.route('/api')
-	.get('/features', features.onGetAll)
-	.post('/features', features.onNew)
-	.get('/features/:id', features.onGet)
-	.put('/features/:id', features.onUpdate)
-	.delete('/features/:id', features.onDelete);
+	.get('/feature_requests', features.onGetAll)
+	.post('/feature_requests', features.onNew)
+	.get('/feature_requests/:id', features.onGet)
+	.put('/feature_requests/:id', features.onUpdate)
+	.delete('/feature_requests/:id', features.onDelete);
 */
 router.route('/')
 	.get(onGetIndex);
