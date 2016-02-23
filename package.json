@@ -4,7 +4,7 @@
   "description": "Internal full stack prototype to handle incoming feature requests sent by clients",
   "main": "index.js",
   "scripts": {
-	"clean": "rimraf client/public",
+    "clean": "rimraf client/public",
     "test": "node_modules/jest-cli/bin/jest.js",
     "build": "npm run clean && node_modules/webpack/bin/webpack.js",
     "start": "node server"
