@@ -19697,15 +19697,31 @@
 	'use strict';
 
 	var React = __webpack_require__(2);
+	var NewFeatureRequestModal = __webpack_require__(165);
 
 	var NewFeatureRequest = React.createClass({
 		displayName: 'NewFeatureRequest',
 
+		getInitialState: function getInitialState() {
+			return {
+				modalIsOpen: false
+			};
+		},
+		toggleModal: function toggleModal() {
+			this.setState({
+				modalIsOpen: !this.state.modalIsOpen
+			});
+		},
 		render: function render() {
 			return React.createElement(
 				'div',
 				null,
-				'New Feature Request'
+				React.createElement(
+					'button',
+					{ className: 'new-feature-request-button', onClick: this.toggleModal },
+					'New Feature Request'
+				),
+				this.state.modalIsOpen ? React.createElement(NewFeatureRequestModal, null) : null
 			);
 		}
 	});
@@ -19777,6 +19793,28 @@
 	});
 
 	module.exports = FeatureRequestList;
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(2);
+
+	var NewFeatureRequestModal = React.createClass({
+		displayName: 'NewFeatureRequestModal',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				'New Feature Request Modal'
+			);
+		}
+	});
+
+	module.exports = NewFeatureRequestModal;
 
 /***/ }
 /******/ ]);
