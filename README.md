@@ -1,16 +1,20 @@
 # Feature Request Prototype
 
-Internal full stack prototype to handle incoming feature requests sent by clients :tada:
+Internal full stack prototype to handle incoming feature requests sent by clients
 
 ## Instructions
 
-npm install
-npm build
-npm start
+```
+$ npm install
+$ npm build
+$ npm start
+```
 
 ## Tests
 
+```
 npm test
+```
 
 ## Demo
 
