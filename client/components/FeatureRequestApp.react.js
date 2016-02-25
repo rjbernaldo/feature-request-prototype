@@ -50,15 +50,41 @@ var productAreas = [
 ];
 
 var FeatureRequestApp = React.createClass({
+	getInitialState: function() {
+		return {
+			clientListFilter: null,
+			productAreaListFilter: null
+		}
+	},
 	render: function() {
 		return (
 			<div>
 				<NewFeatureRequest />
-				<ClientList clients={ clients }/>
-				<ProductAreaList productAreas={ productAreas }/>
-				<FeatureRequestList featureRequests={ featureRequests } />
+
+				<ClientList
+					clients={ clients }
+					setClientListFilter={ this.setClientListFilter } />
+
+				<ProductAreaList
+					productAreas={ productAreas }
+					setProductAreaListFilter={ this.setProductAreaListFilter } />
+
+				<FeatureRequestList
+					featureRequests={ featureRequests }
+					clientListFilter={ this.state.clientListFilter }
+					productAreaListFilter={ this.state.productAreaListFilter } />
 			</div>
 		);
+	},
+	setClientListFilter: function(clientListFilter) {
+		this.setState({
+			clientListFilter: clientListFilter
+		});
+	},
+	setProductAreaListFilter: function(productAreaListFilter) {
+		this.setState({
+			productAreaListFilter: productAreaListFilter
+		});
 	}
 });
 
