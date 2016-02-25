@@ -24,7 +24,7 @@ var NewFeatureRequest = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<button className="new-feature-request" onClick={ this.onOpenModal }>New Feature Request</button>
+				<Button className="new-feature-request" onClick={ this.onOpenModal }>New Feature Request</Button>
 
 				<Modal show={ this.state.showModal } onHide={ this.onCloseModal } className="static-modal">
 					<Modal.Header>
