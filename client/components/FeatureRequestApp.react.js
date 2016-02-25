@@ -5,6 +5,7 @@ var ClientList = require('./ClientList.react');
 var ProductAreaList = require('./ProductAreaList.react');
 var FeatureRequestList = require('./FeatureRequestList.react');
 
+// Fixtures until backend is finalized
 var featureRequests = [
 	{
 		title: 'Please add email functionality',
@@ -21,7 +22,6 @@ var featureRequests = [
 			productArea: 'Reports'
 	}
 ];
-
 var clients = [
 	{
 		name: 'Client A'
@@ -33,7 +33,6 @@ var clients = [
 		name: 'Client C'
 	}
 ];
-
 var productAreas = [
 	{
 		name: 'Policies'
