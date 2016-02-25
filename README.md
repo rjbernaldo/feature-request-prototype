@@ -15,7 +15,7 @@ $ npm start     # node server/index.js
 
 **Tests**
 ```
-$ npm test        # run test suite using jest
+$ npm test      # run test suite using jest
 ```
 
 **Demo**
