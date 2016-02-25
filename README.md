@@ -20,5 +20,9 @@ npm test
 
 ## Notes
 
+### UI Overview
 Drawn using [sketch.io/sketchpad](https://sketch.io/sketchpad)
 ![alt tag](https://raw.githubusercontent.com/rjbernaldo/feature-request-prototype/master/wireframe.png)
+
+### Data flow:
+![alt tag](https://raw.githubusercontent.com/rjbernaldo/feature-request-prototype/master/dataflow.jpg)
