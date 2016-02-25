@@ -9,7 +9,11 @@ var ClientList = React.createClass({
 		var output = [];
 
 		clients.forEach(function(client, index) {
-			output.push(<Button key={ index } className="client-list-content">{ client.name }</Button>);
+			output.push(
+				<Button key={ index } className="client-list-content">
+					{ client.name }
+				</Button>
+			);
 		});
 
 		return output;
