@@ -9,7 +9,7 @@ Built using [Node](https://github.com/nodejs/node), [Express](https://github.com
 **Instructions**
 ```
 $ npm install   # install npm dependencies
-$ npm build     # use webpack to build single js file from set of jsx components
+$ npm run build # use webpack to build single js file from set of jsx components
 $ npm start     # node server/index.js
 ```
 
