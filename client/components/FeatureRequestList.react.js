@@ -26,9 +26,10 @@ var FeatureRequestList = React.createClass({
 						className="feature-request-list-content"
 						header={ featureRequest.title }>
 						<div>{ featureRequest.description }</div>
-						<div>{ featureRequest.date }</div>
-						<div>{ index }</div>
 						<div>{ featureRequest.client }</div>
+						<div>{ featureRequest.clientPriority }</div>
+						<div>{ featureRequest.targetDate }</div>
+						<div>{ featureRequest.ticketUrl }</div>
 						<div>{ featureRequest.productArea }</div>
 					</Panel>
 				);

@@ -6,20 +6,25 @@ var ProductAreaList = require('./ProductAreaList.react');
 var FeatureRequestList = require('./FeatureRequestList.react');
 
 // Fixtures until backend is finalized
+var date = new Date().toISOString();
 var featureRequests = [
 	{
 		title: 'Please add email functionality',
 		description: 'It will be really helpful to have email functionality',
-		date: new Date().toISOString(),
 		client: 'Client A',
-			productArea: 'Claims'
+		clientPriority: 1,
+		targetDate: date,
+		ticketUrl: 'https://google.com',
+		productArea: 'Claims'
 	},
-	{
+		{
 		title: 'Add Twitter integration',
 		description: 'Lorem ipsum',
-		date: new Date().toISOString(),
 		client: 'Client B',
-			productArea: 'Reports'
+		clientPriority: 2,
+		targetDate: date,
+			ticketUrl: 'https://google.com',
+		productArea: 'Reports'
 	}
 ];
 var clients = [

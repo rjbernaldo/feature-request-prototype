@@ -13,15 +13,19 @@ describe('FeatureRequestList', function() {
 		{
 			title: 'Please add email functionality',
 			description: 'It will be really helpful to have email functionality',
-			date: date,
 			client: 'Client A',
+			clientPriority: 1,
+			targetDate: date,
+			ticketUrl: 'https://google.com',
 			productArea: 'Claims'
 		},
 		{
 			title: 'Add Twitter integration',
 			description: 'Lorem ipsum',
-			date: date,
 			client: 'Client B',
+			clientPriority: 2,
+			targetDate: date,
+			ticketUrl: 'https://google.com',
 			productArea: 'Reports'
 		}
 	];
