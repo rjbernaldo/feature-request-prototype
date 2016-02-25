@@ -5,6 +5,7 @@ describe('ClientList', function() {
 	var ReactDOM = require('react-dom');
 	var TestUtils = require('react-addons-test-utils');
 	var ClientList = require('../../components/ClientList.react');
+	var setClientListFilterFunc = jest.genMockFunction();
 
 	var clients = [
 		{
@@ -19,14 +20,12 @@ describe('ClientList', function() {
 	];
 
 	it('should render succesfully', function() {
-		var setClientListFilterFunc = jest.genMockFunction();
 		var clientList = TestUtils.renderIntoDocument(<ClientList clients={ clients } setClientListFilter={ setClientListFilterFunc }/>);
 
 		expect(TestUtils.isCompositeComponent(clientList)).toBeTruthy();
 	});
 
 	it('should render clients from an array of objects passed as prop', function() {
-		var setClientListFilterFunc = jest.genMockFunction();
 		var clientList = TestUtils.renderIntoDocument(<ClientList clients={ clients } setClientListFilter={ setClientListFilterFunc }/>);
 		var contents = TestUtils.scryRenderedDOMComponentsWithClass(clientList, 'client-list-content');
 
@@ -37,7 +36,6 @@ describe('ClientList', function() {
 	});
 
 	it('should highlight default filter option on initialize', function() {
-		var setClientListFilterFunc = jest.genMockFunction();
 		var clientList = TestUtils.renderIntoDocument(<ClientList clients={ clients } setClientListFilter={ setClientListFilterFunc }/>);
 		var currentFilter = TestUtils.scryRenderedDOMComponentsWithClass(clientList, 'show-client');
 
@@ -45,7 +43,6 @@ describe('ClientList', function() {
 	});
 
 	it('should call prop function on clicking a filter', function() {
-		var setClientListFilterFunc = jest.genMockFunction();
 		var clientList = TestUtils.renderIntoDocument(<ClientList clients={ clients } setClientListFilter={ setClientListFilterFunc }/>);
 		var button = TestUtils.scryRenderedDOMComponentsWithClass(clientList, 'client-list-content');
 
@@ -55,7 +52,6 @@ describe('ClientList', function() {
 	});
 
 	it('should highlight currently applied filter', function() {
-		var setClientListFilterFunc = jest.genMockFunction();
 		var clientList = TestUtils.renderIntoDocument(<ClientList clients={ clients } setClientListFilter={ setClientListFilterFunc }/>);
 		var button = TestUtils.scryRenderedDOMComponentsWithClass(clientList, 'client-list-content');
 
