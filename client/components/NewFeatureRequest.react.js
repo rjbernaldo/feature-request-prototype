@@ -19,12 +19,12 @@ var NewFeatureRequest = React.createClass({
 		});
 	},
 	onSubmit: function() {
-
+		this.onCloseModal();
 	},
 	render: function() {
 		return (
 			<div>
-				<button className="new-feature-request-button" onClick={ this.onOpenModal }>New Feature Request</button>
+				<button className="new-feature-request" onClick={ this.onOpenModal }>New Feature Request</button>
 
 				<Modal show={ this.state.showModal } onHide={ this.onCloseModal } className="static-modal">
 					<Modal.Header>
@@ -34,8 +34,8 @@ var NewFeatureRequest = React.createClass({
 						<input></input>
 					</Modal.Body>
 					<Modal.Footer>
-						<Button onClick={ this.onCloseModal }>Close</Button>
-						<Button bStyle="primary" onClick={ this.onSubmit }>Save</Button>
+						<Button className='close-new-feature-request' onClick={ this.onCloseModal }>Close</Button>
+						<Button className='create-new-feature-request' bStyle="primary" onClick={ this.onSubmit }>Create</Button>
 					</Modal.Footer>
 				</Modal>
 			</div>
