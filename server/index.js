@@ -8,9 +8,10 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 app.use('/public', express.static(__dirname + '/../client/public'));
+app.use('/public/bootstrap', express.static(__dirname + '/../node_modules/bootstrap/'));
 app.use('/', routes);
 
-mongoose.connect('mongodb://localhost/feature-request-prototype');
+//mongoose.connect('mongodb://localhost/feature-request-prototype');
 
 http.createServer(app).listen(port, onServerCreated);
 
