@@ -13,10 +13,8 @@ app.use('/', routes);
 
 //mongoose.connect('mongodb://localhost/feature-request-prototype');
 
-var server = http.createServer(app).listen(port, onServerCreated);
+module.exports = http.createServer(app).listen(port, onServerCreated);
 
 function onServerCreated() {
 	console.log('Express server listening on port: ' + port);
 }
-
-module.exports = server;
