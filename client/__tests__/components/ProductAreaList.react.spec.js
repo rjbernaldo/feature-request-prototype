@@ -1,4 +1,5 @@
-jest.dontMock('../../components/ProductAreaList.react');
+// jest.dontMock('../../components/ProductAreaList.react');
+jest.autoMockOff();
 
 describe('ProductAreaList', function() {
 	var React = require('react');

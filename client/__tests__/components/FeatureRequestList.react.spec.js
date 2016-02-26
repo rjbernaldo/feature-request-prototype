@@ -1,4 +1,5 @@
-jest.dontMock('../../components/FeatureRequestList.react');
+// jest.dontMock('../../components/FeatureRequestList.react');
+jest.autoMockOff();
 
 describe('FeatureRequestList', function() {
 	var React = require('react');

@@ -1,10 +1,11 @@
-jest.dontMock('../../components/ClientList.react');
+// jest.dontMock('./../../components/ClientList.react');
+jest.autoMockOff();
 
 describe('ClientList', function() {
 	var React = require('react');
 	var ReactDOM = require('react-dom');
 	var TestUtils = require('react-addons-test-utils');
-	var ClientList = require('../../components/ClientList.react');
+	var ClientList = require('./../../components/ClientList.react');
 	var setClientListFilterFunc = jest.genMockFunction();
 
 	var clients = [

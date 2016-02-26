@@ -28,9 +28,10 @@
     "html-webpack-plugin": "^2.9.0",
     "jest": "^0.1.40",
     "jest-cli": "^0.8.2",
+    "frisby": "^0.8.5",
+    "webpack": "^1.12.14",
     "react-addons-test-utils": "^0.14.7",
-    "rimraf": "^2.5.2",
-    "webpack": "^1.12.14"
+    "rimraf": "^2.5.2"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
@@ -40,8 +41,8 @@
     "node-jsx": "^0.13.3",
     "path": "^0.12.7",
     "react": "^0.14.7",
-    "react-bootstrap": "^0.28.3",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-bootstrap": "^0.28.3"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",

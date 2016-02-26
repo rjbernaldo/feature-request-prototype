@@ -1,4 +1,5 @@
-jest.dontMock('../../components/NewFeatureRequest.react');
+// jest.dontMock('../../components/NewFeatureRequest.react');
+jest.autoMockOff();
 
 describe('NewFeatureRequest', function() {
 	var React = require('react');
