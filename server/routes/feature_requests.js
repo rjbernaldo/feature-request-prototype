@@ -13,11 +13,22 @@ function onGetAll(req, res) {
 }
 
 function onNew(req, res) {
-	res.json(200);
+	console.log('req.headers', req.headers);
+	console.log('req.body', req.body);
+	// console.log('req.body', req.body);
+	// FeatureRequest.create(req.body.featureRequest, function(err, result) {
+	// 	if (err) {
+	// 		res.status(404);
+	// 	} else {
+	// 		res.status(201).json({
+	// 			id: result._id
+	// 		});
+	// 	}
+	// });
 }
 
 function onGet(req, res) {
-	res.json(200);
+	console.log('req.params', req.params);
 }
 
 function onUpdate(req, res) {

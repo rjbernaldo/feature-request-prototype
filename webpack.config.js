@@ -1,8 +1,13 @@
+var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 	template: __dirname + '/client/index.html',
 	filename: 'index.html',
 	inject: 'body'
+});
+var ShimModules = new webpack.ProvidePlugin({
+	'Promise': 'es6-promise',
+	'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
 });
 
 module.exports = {
@@ -26,5 +31,8 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [HTMLWebpackPluginConfig]
+	plugins: [
+		HTMLWebpackPluginConfig,
+		ShimModules
+	]
 };
