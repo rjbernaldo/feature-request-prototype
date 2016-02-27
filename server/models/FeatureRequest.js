@@ -9,9 +9,7 @@ var featureRequestSchema = new Schema({
     targetDate: Date,
     ticketUrl: String,
     productArea: String,
-    created_at: Date,
-    updated_at: Date
-});
+}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }});
 
 var FeatureRequest = mongoose.model('FeatureRequest', featureRequestSchema);
 
