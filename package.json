@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf client/public",
     "test": "node_modules/jest-cli/bin/jest.js --verbose",
-    "build": "npm run clean && node_modules/webpack/bin/webpack.js --colors",
+    "build": "npm run clean && node_modules/webpack/bin/webpack.js",
     "start": "node server"
   },
   "repository": {
@@ -41,7 +41,6 @@
     "bootstrap": "^3.3.6",
     "classnames": "^2.2.3",
     "express": "^4.13.4",
-    "fetch": "^1.0.1",
     "mongoose": "^4.4.4",
     "node-jsx": "^0.13.3",
     "path": "^0.12.7",
