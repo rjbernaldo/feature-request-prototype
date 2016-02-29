@@ -13,8 +13,9 @@ function onGetAll(req, res) {
 }
 
 function onNew(req, res) {
-	console.log('req.headers', req.headers);
-	console.log('req.body', req.body);
+	console.log(req);
+	// console.log('req.headers', req.headers);
+	// console.log('req.body', req.body);
 	// console.log('req.body', req.body);
 	// FeatureRequest.create(req.body.featureRequest, function(err, result) {
 	// 	if (err) {
