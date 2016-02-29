@@ -14,7 +14,6 @@ app.use('/public', express.static(__dirname + '/../client/public'));
 app.use('/public/bootstrap', express.static(__dirname + '/../node_modules/bootstrap/'));
 app.use('/', routes);
 
-mongoose.set('debug', true);
 mongoose.connect('mongodb://localhost/feature-request-prototype');
 
 module.exports = http.createServer(app).listen(port, onServerCreated);

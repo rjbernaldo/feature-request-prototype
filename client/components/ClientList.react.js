@@ -14,7 +14,7 @@ var ClientList = React.createClass({
 			<ButtonToolbar>
 				{ this.renderClients(this.props.clients) }
 				<Button
-					className={ classNames({ 'show-client': this.state.clientListFilter === null }) }
+					className={ classNames({ 'show-client': this.state.clientListFilter === null, 'btn-info': this.state.clientListFilter === null }) }
 					onClick={ this.setClientListFilter.bind(this, null) }>
 					All Clients
 				</Button>
@@ -29,7 +29,8 @@ var ClientList = React.createClass({
 		clients.forEach(function(client, index) {
 			var btnClasses = classNames({
 				'client-list-content': true,
-				'show-client': this.state.clientListFilter === client.name
+				'show-client': this.state.clientListFilter === client.name,
+				'btn-info': this.state.clientListFilter === client.name
 			});
 
 			output.push(

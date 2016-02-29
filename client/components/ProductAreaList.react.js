@@ -14,7 +14,7 @@ var ProductAreaList = React.createClass({
 			<ButtonToolbar>
 				{ this.renderProductAreas(this.props.productAreas) }
 				<Button
-					className={ classNames({ 'show-product-area': this.state.productAreaListFilter === null}) }
+					className={ classNames({ 'show-product-area': this.state.productAreaListFilter === null, 'btn-info': this.state.productAreaListFilter === null }) }
 					onClick={ this.setProductAreaListFilter.bind(this, null) }>
 				All Product Areas
 				</Button>
@@ -29,7 +29,8 @@ var ProductAreaList = React.createClass({
 		productAreas.forEach(function(productArea, index) {
 			var btnClasses = classNames({
 				'product-area-list-content': true,
-				'show-product-area': this.state.productAreaListFilter === productArea.name
+				'show-product-area': this.state.productAreaListFilter === productArea.name,
+				'btn-info': this.state.productAreaListFilter === productArea.name
 			});
 
 			output.push(

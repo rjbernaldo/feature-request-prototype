@@ -21,7 +21,7 @@ var NewFeatureRequest = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<Button className="new-feature-request" onClick={ this.onOpenModal }>New Feature Request</Button>
+				<Button className="new-feature-request btn-success" onClick={ this.onOpenModal }>New Feature Request</Button>
 
 				<Modal show={ this.state.showModal } onHide={ this.onCloseModal } className="static-modal">
 					<Modal.Header>
@@ -48,7 +48,7 @@ var NewFeatureRequest = React.createClass({
 					</Modal.Body>
 					<Modal.Footer>
 						<Button className='close-new-feature-request' onClick={ this.onCloseModal }>Close</Button>
-						<Button className='create-new-feature-request' bStyle="primary" onClick={ this.onSubmit }>Create</Button>
+						<Button className='create-new-feature-request btn-success' bStyle="primary" onClick={ this.onSubmit }>Create</Button>
 					</Modal.Footer>
 				</Modal>
 			</div>
@@ -96,48 +96,42 @@ var NewFeatureRequest = React.createClass({
 					productArea: 'Policies'
 				});
 
+				this.props.reload();
 				this.onCloseModal();
 			}.bind(this));
 		}.bind(this));
 	},
 	onTitleChange: function(e) {
-		console.log('onTitleChange', e.target.value);
 		this.setState({
 			title: e.target.value
 		});
 	},
 	onDescriptionChange: function(e) {
-		console.log('onDescriptionChange', e.target.value);
 		this.setState({
 			description: e.target.value
 		});
 	},
 	onClientChange: function(e) {
-		console.log('onClientChange', e.target.value);
 		this.setState({
 			client: e.target.value
 		});
 	},
 	onClientPriorityChange: function(e) {
-		console.log('onClientPriorityChange', e.target.value);
 		this.setState({
 			clientPriority: e.target.value
 		});
 	},
 	onTargetDateChange: function(date) {
-		console.log('onTargetDateChange', date);
 		this.setState({
 			targetDate: date
 		});
 	},
 	onTicketURLChange: function(e) {
-		console.log('onTargetURLChange', e.target.value);
 		this.setState({
 			ticketURL: e.target.value
 		});
 	},
 	onProductAreaChange: function(e) {
-		console.log('onProductAreaChange', e.target.value);
 		this.setState({
 			productArea: e.target.value
 		});
