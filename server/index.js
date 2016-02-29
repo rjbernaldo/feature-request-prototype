@@ -8,7 +8,6 @@ var routes = require('./routes');
 var app = express();
 var port = process.env.PORT || 8080;
 
-// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/public', express.static(__dirname + '/../client/public'));
 app.use('/public/bootstrap', express.static(__dirname + '/../node_modules/bootstrap/'));
